@@ -4,11 +4,11 @@ This repository is a collection of notable projects revolving around computer sc
 Each folder represents a different project
 
 # Project Overviews:
+## Organized/Official Projects
+- Global Game Jam 2025: Worked in a group to program a game in Unity for a 72 hour game jam
 ## Embeded/Arduino projects
 
 ## AI Projects
-
-## Organized/Official Projects
 
 ## General Programming Assignments
 
