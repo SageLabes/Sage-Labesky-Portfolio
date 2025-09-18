@@ -10,5 +10,5 @@ Each folder represents a different project
 
 ## AI Projects
 
-## General Programming Assignments
+## General Programming Projects
 
