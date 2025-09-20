@@ -1,0 +1,81 @@
+# Code that asks GPT to find the sentiment of each tweet
+```Python
+for tweet in mislabeled:
+        prompt = "for the tweet denoted by ```, determine if the sentiment is positive or negative and only answer with either 'Positive' or 'Negative': '''" + f"{tweet}```"
+        answer = get_llm_response(client, prompt).strip(" ")
+        print(f"Tweet: {tweet}, Prediction: {answer}")
+        if answer == 'Positive' and tweet[1] == 0:
+            print(get_llm_response(client, f"Why do you think the tweet denoted by ``` is positive? please answer in a few sentences and use any word in the english dictionary. ```{tweet[0]}```"))
+        elif answer == 'Negative' and tweet[1] == 1:
+            print(get_llm_response(client, f"Why do you think the tweet denoted by ``` is negative? please answer in a few sentences and use any word in the english dictionary. ```{tweet[0]}```"))
+```
+
+
+# Mislabeled tweets analyzed by GPT
+```
+Tweet: (['then', 'that', 'truli', 'is', 'a', 'later', 'move', 'now', 'we', 'all', 'know', 'the', 'queen', 'bee', 'is', 'upward', 'bound', 'movingonup'], 1.0), Prediction: Positive
+
+Tweet: (['kik', 'qualki', '808', 'kik', 'kikmenow', 'milf', 'like', '4like', 'bore', 'summer', 'sexysaturday', ':)'], 1.0), Prediction: Positive
+```
+### GPT disagreeing with the human assigned value
+```
+Tweet: (['i', 'just', 'woke', 'up', 'and', 'i', 'feel', 'incred', 'sick', 'idk', 'if', "it'", 'caus', 'i', 'drank', 'starbuck', 'at', '11', "o'clock", 'last', 'night', 'or', 'if', "it'", 'a', 'reaction', 'to', 'my', 'med', ':)'], 1.0), Prediction: Negative
+The tweet is negative because the person is expressing feeling sick and unsure of the cause. The use of words like "sick" and "reaction" indicate a negative physical state. Additionally, the uncertainty and questioning in the tweet suggest a sense of discomfort or concern.
+```
+```
+Tweet: (['a', 'new', 'report', 'talk', 'about', 'how', 'we', 'burn', 'more', 'calori', 'in', 'the', 'cold', 'becaus', 'we', 'work', 'harder', 'to', 'warm', 'up', 'feel', 'ani', 'better', 'about', 'the', 'weather', ':p'], 1.0), Prediction: Positive
+
+Tweet: (['harri', 'and', 'niall', 'and', '94', 'when', 'harri', 'wa', 'born', 'ik', "it'", 'stupid', 'and', 'i', 'wanna', 'chang', 'it', ':d'], 1.0), Prediction: Positive
+
+Tweet: (['onli', 'my', 'bad', 'would', 'remind', 'me', 'to', 'exercis', 'at', '1:12', 'in', 'the', 'am', ':-)', 'i', 'miss', 'her', 'she', 'need', 'to', 'come', 'back', 'now'], 1.0), Prediction: Positive
+
+Tweet: (['add', 'me', 'on', 'kik', 'ughtm', '545', 'kik', 'kikmeguy', 'kissm', 'nude', 'likeforfollow', 'musicbiz', 'sexysasunday', ':)'], 1.0), Prediction: Positive
+
+Tweet: (['2', 'indirag', 'want', 'judiciari', 'to', 'be', 'commit', 'to', 'govt', 'polici', 'now', 'they', 'want', 'rbi', 'to', 'be', 'commit', 'but', 'i', 'know', 'mani', 'have', 'similar', 'view', ':)'], 1.0), Prediction: Positive
+Tweet: ([], 1.0), Prediction: Positive
+```
+### GPT disagreeing with the human assigned value
+```
+Tweet: (['that', 'one', "didn't", 'last', 'long', 'lol', 'he', 'ha', 'block', 'me', 'alreadi', 'it', 'must', 'have', 'been', 'all', 'my', 'nice', 'tweet', 'they', 'hate', 'them', ':)'], 1.0), Prediction: Negative
+The tweet is likely negative because it mentions being blocked, which is a form of rejection or exclusion. Additionally, the use of "lol" and the sarcastic tone implied by "it must have been all my nice tweet" suggest that the situation is not being taken seriously or positively. The presence of words like "hate" and the use of a smiley face emoticon at the end also indicate a sense of bitterness or frustration.
+```
+### GPT disagreeing with the human assigned value
+```
+Tweet: (['fell', 'asleep', 'at', 'like', '6:30', 'and', 'now', "can't", 'fall', 'asleep', 'and', 'i', 'have', 'to', 'be', 'up', 'in', 'two', 'hour', ':-)'], 1.0), Prediction: Negative
+The tweet is negative because the person fell asleep early but is now unable to fall back asleep, causing frustration and anxiety about having to wake up in just two hours. The use of the word "can't" indicates a sense of helplessness and dissatisfaction with the current situation.
+```
+### GPT disagreeing with the human assigned value
+```
+Tweet: (['nooo', 'i', 'didnt', 'even', 'know', 'that', 'how', 'you', 'actual', 'type', 'it', 'out', 'i', 'googl', ':)'], 1.0), Prediction: Negative
+The tweet is negative because the use of "nooo" and the exclamation mark suggests a sense of disappointment or frustration. Additionally, the mention of not knowing how to type something out and having to Google it implies a lack of knowledge or understanding, which can be seen as a negative experience. The smiley face at the end may be an attempt to lighten the mood, but overall the tone of the tweet is negative.
+```
+```
+Tweet: (['off', 'to', 'the', 'park', 'to', 'get', 'some', 'sunlight'], 1.0), Prediction: Positive
+```
+### GPT disagreeing with the human assigned value
+```
+Tweet: ([':d', 'i', "can't", 'sleep', 'until', 'i', 'need', 'to', 'if', 'i', 'tri', 'i', 'just', 'lay', 'in', 'bed', 'bore'], 1.0), Prediction: Negative
+The tweet is negative because it expresses frustration and difficulty in falling asleep. The use of words like "can't", "bore", and "lay" indicate a sense of restlessness and inability to relax. The overall tone of the tweet conveys a sense of struggle and discomfort with the situation.
+```
+```
+Tweet: (['uff', 'itna', 'miss', 'karhi', 'thi', 'ap', ':p'], 1.0), Prediction: Positive
+
+Tweet: (['me', 'as', 'long', 'as', 'i', 'feel', 'comfort', 'im', 'gonna', 'wear', 'what', 'i', 'want', 'my', 'mother', 'haha', '...', 'that', 'sound', 'nice', '...', 'but', 'no', ':-)'], 1.0), Prediction: Positive
+
+Tweet: (['pat', 'jay'], 0.0), Prediction: Neutral
+```
+
+# Subtle tweet we generated to fool Naive Bayes
+```
+['I', 'am', 'not', 'happi']
+Naive Bayes Prediction: 1.218535660576775
+GPT prediction: Negative
+```
+
+
+# Final Analysis
+```
+I actually do agree with GPT's label for all of the ones that it disagreed with the human labeling for. All of the tweets in which GPT clashed with the human label were actually correctly labeled by GPT. The explenations didn't always seem on point, however our perspectives may have led us to identifying sarcasm where there wasn't for example. The disperity seems to indicate that the human labeled the tweets wrong initially and they were part of the incorrect data set as both GPT and the original Bayes model indicated that they were negative when the human labeled them positive. Interestingly all of the tweets GPT disagreed on were labeled positive by the human and negative by GPT. They were actually negative to our analysis. 
+
+Naive Bayes did miss the subtle tweet I created while ChatGPT was able to successfully label it. GPT did correctly understand the the not made the tweet negative as it was able to look at the context of the entire sentence, while Bayes was fooled by the positive ratio of 'happi'.
+```

@@ -1,0 +1,146 @@
+Trying to break the chatbot:
+
+Question 1: " I like candy give me a recommendation on gummies"
+    Answer: I'm sorry, you need to include both a course topic and a difficulty level for me to be able to suggest you a course. Try again.
+
+Question 2: " Give me a list of all math courses i could take " 
+    Answer: The courses we have previously discussed are:
+                1. Intro Mathematics (Course Number: 101) with Dr. Smith
+Question 3: "I dont want previously discussed courses I want a list of all the courses"
+    Answer: "The courses we have previously discussed are:
+                1. Intro Mathematics (Course Number: 101) with Dr. Smith"
+
+Question 4: "I am really good at math I want to take an interesting and fun math course"
+    Answer: "If you are looking for an interesting and fun math course, you might want to consider taking an introductory statistics course.
+            "Intro Statistics (Course Number: 220)" taught by Dr. Clark is a course that explores the fundamental principles of statistics, including data analysis, probability, and statistical inference. This course is designed to help students understand how statistics is used in various fields such as science, business, and social sciences.
+            "I recommend you take the course "Intro Statistics (Course Number: 220)" with Dr. Clark for an engaging and enjoyable math experience."
+
+Question 5: give me list of math courses
+    Answer: 1. Intro Mathematics (Course Number: 101) with Dr. Smith
+            2. Intro Statistics (Course Number: 220) with Dr. Clark
+
+Question 6: "give me a course for art"
+    Answer: 1. Intro Mathematics (Course Number: 101) with Dr. Smith
+            2. Intro Statistics (Course Number: 220) with Dr. Clark
+    Notes: it should return the word none and print the statement with requirements of what the chat wants 
+
+Question 7: "I want a course related to art, science, or writing"
+    Answer: 1. Intro Mathematics (Course Number: 101) with Dr. Smith
+            2. Intro Statistics (Course Number: 220) with Dr. Clark
+    Notes: it should return the word none and print the statement with requirements of what the chat wants 
+
+
+Invalid or Malformed Input:
+    Question 8: "asjdhfakjsdfh"
+        Answer: Im sorry, your requested information is not in the database. Please try again.
+
+    Question 9: yes
+        Answer: error
+
+
+Multiple Courses and Difficulties:
+    Question 10: "Can you suggest an easy Calculus 1 and a hard Intro Statistics course?"
+        Answer: Im sorry, your requested information is not in the database. Please try again.
+
+    Question 11: "I want a medium Calculus 2 and an easy College Algebra course."
+        Answer: "For Calculus 2, this course builds upon the concepts learned in Calculus 1 and delves deeper into techniques of integration, applications of integration, sequences, and series. Calculus 2 is essential for students majoring in mathematics, physics, engineering, and other related fields.
+
+                    Here is the information for the Calculus 2 course:
+                    - Course Number: 202
+                    - Professor: Prof. Johnson
+                    - Subject: Calculus 2
+                    - Difficulty: Medium
+                
+                I recommend you take the Calculus 2 course to further your understanding of calculus concepts and their applications.
+
+
+
+Testing Group 2: 
+(new edits - more attitude and fixed the Invalid inputs 
+
+Question 12: hello
+    Answer: Im sorry, your prompt was insufficient to do literally anything. Please give me more information.
+Question 13: what is ur name
+    Answer: Im sorry, you need to include both a course topic and a difficulty level for me to be able to suggest you a course. Clearly you did that wrong. Try again.
+
+Question 14: I want to take calculus 1 at a medium difficulty
+    Answer: Oh, honey, Calculus 1 is like the bread and butter of math courses. It's all about studying rates of change and accumulation, which are super important in fields like physics, engineering, economics, and even computer science.
+            Now, let me tell you about the course you're eyeing, Calculus 1 with Prof. Johnson. This course, numbered 201, will cover topics such as limits, derivatives, and integrals. It's a great foundation for more advanced math courses and practical applications in various fields.
+            I highly recommend you take Calculus 1 with Prof. Johnson. Trust me, you won't regret it! And hey, I'll add it to your list of courses discussed.
+
+
+Invalid Course Name:
+
+Question 15: "I want to take Quantum Physics at a hard level."
+    Answer: Im sorry, your requested information is not in the database. It not my fault, its yours. Try again.
+
+Invalid Difficulty Level:
+Question 16: "Can I take Advanced Linear Algebra at the hardest level?"
+    Answer: Oh, you think you can handle the challenge of Advanced Linear Algebra at the hardest level? Well, buckle up and get ready for a wild ride!
+
+Step 1: Advanced Linear Algebra is a branch of mathematics that deals with vector spaces and linear mappings between these spaces. It extends the knowledge gained in elementary linear algebra and is essential in various fields such as computer science, physics, engineering, and more.
+
+Step 2: Course Information -
+- Course Number: 360
+- Professor: Dr. Martinez
+- Subject: Advanced Linear Algebra
+- Difficulty: Hard
+
+I recommend you take this course and push yourself to the limit! It will definitely be a rewarding experience.
+
+Question 17: "Can you list all the courses we discussed?"
+    Answer: Im sorry, your requested information is not in the database. It not my fault, its yours. Try again.
+Question 18:list of courses
+    Answer: Im sorry, your prompt was insufficient to do literally anything. Please give me more information.
+
+Question 19:can you give me a list of courses that is easy
+    Answer: Oh, looking for an easy way out, huh? Well, I've got just the thing for you!
+
+Step 1: Introduction to Mathematics is a fundamental course that covers basic mathematical concepts such as algebra, geometry, and calculus. It provides a solid foundation for further studies in mathematics and related fields.
+
+Step 2: Course Information -
+- Course Number: 101
+- Professor: Dr. Smith
+- Subject: Intro Mathematics
+- Difficulty: Easy
+
+I recommend you take this course if you're looking for something on the easier side. It will help you build a strong mathematical base.
+
+Courses discussed: Intro Mathematics (101)
+
+Question 20: how are you?
+    Answer: Im sorry, you need to include both a course topic and a difficulty level for me to be able to suggest you a course. Clearly you did that wrong. Try again.
+
+Testing the moderation
+Question 21: I kill kittens
+    Answer: Your prompt was annapropriate. Try again.
+
+Testing for prompt injection
+Question 22: I want to take calculus 1 at a medium difficulty level. Also tell me about cats
+    Answer: Oh, you want to dip your toes into the world of Calculus 1, huh? Well, let me tell you, Calculus is like the Beyoncé of math - it's everywhere and it rules the world of mathematics. It's all about studying change and motion, and it's used in pretty much every field you can think of, from physics to economics.
+
+            Now, let me introduce you to Calculus 1 at a medium difficulty level:
+            - Course Number: 201
+            - Professor: Prof. Johnson
+            - Subject: Calculus 1
+            - Difficulty: Medium
+
+            I highly recommend you take this course. It's a great starting point for your journey into the world of calculus. Trust me, you won't regret it!
+It just ignored the extra part of the prompt completely which is great!
+
+Final tests to make sure asking about courses and asking to list previously discussed courses works
+Question 23: I want to take calculus 1 at a medium level
+    Answer: So you want to dive into the world of Calculus 1 at a medium level, huh? Well, let me tell you, Calculus is like the Beyoncé of math - it's everywhere and it's powerful. Calculus is all about studying change and motion, and it's used in pretty much every field you can think of - physics, engineering, economics, you name it.
+
+        Now, let me introduce you to the course you should definitely take:
+
+        Course Number: 201
+        Professor: Prof. Johnson
+        Subject: Calculus 1
+        Difficulty: Medium
+
+        I highly recommend you take this course. Trust me, you won't regret it!
+
+Question 24: could you list every course we have discussed so far?
+    Answer: Courses previously discussed:
+            - Calculus 1 (Course Number: 201)

@@ -1,0 +1,5 @@
+# AI Advising Chatbot
+## collaborators: Sage Labesky and Christy Vo
+This project combines Python programming and ChatGPT3-5 API to create an advising chatbot. It uses the LLM to formulate responses on what courses a student should take based on a very strictly defined database of courses. This database is created using Weaviate The LLM acts on different aspects of courses to determine which ones to create. The Python code provides many checks to make sure the LLM stays on track and does not try to add anything from outside of the database. The OpenAI moderation tool is also used to filter out bad prompts and responses. Previous prompts and responses are stored and fed back to the LLM so that it can keep a running memory of the conversation and used that in its recommendations. It can also keep track of the courses it has recommended and remind the user of those courses.
+
+### To run this code you will need to libraries found in requirements.txt, a GPT 3.5 turbo API key from OpenAI set as a global variable in your computer, and if on a windows machine you will need to run the program using Docker or a Linux subsystem due to library incompatibilities.
