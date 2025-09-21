@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src = "Functions.js"></script>
+    <script src = "FillLocations.js"></script>
+</head>
+<body onload = "fillLocationsDropDown()">
+    <!-- Program uses a function to load locations into the dropdown from a javascript file, flexible for loading new locations -->
+    <!-- Top bar with logo and name are consistent across all pages -->
+    <nav> 
+        <div class = "nav-logo">
+            <img src="img/BetterAirplane.svg" alt="AirplaneLogo" class = "AirplaneLogo">
+            <p1 class="logo">FindFlights</p1>
+        </div>
+    </nav>
+
+    <h1 class = "page-title-progress">Book With AI</h1>
+    <!-- Chat window where the chatbot messages and user inputs would happen -->
+    <div class = "chat-window">
+        <div class = "chat-box">
+            <div class = "chat-message">
+                <p class = "chat-text">Hello! I am an AI assistant designed to help you book a flight! please tell me where you are starting, what your destination is, what day you would like to depart, and which day you would like to return and I will find you a flight. If you have any questions regarding the process feel free to ask!</p>
+            </div>
+        </div>
+        <!-- Portion where the user input exists, currently uses fill in the blank since ai isn't implemented -->
+        <div class = "send-message-space">
+            <div class = "fill-the-blank">
+                <label for="startingLocation" class = "aiLabel">Hello, I would like to depart from </label>
+                <select name = "locations" id = "startingLocation" class = "ai-fill">
+                </select><br><br>
+                <label for="destination" class = "aiLabel"> and my destination is </label>
+                <select name = "locations" id = "destination" class = "ai-fill">
+                </select><br><br>
+            </div><div class = "fill-the-blank">
+                <label for="departureDate" class = "aiLabel"> I will be leaving on </label>
+                <input type="date" id="departureDate" name="departureDate" class = "ai-fill"><br><br>
+                <label for="returnDate" class = "aiLabel"> and returning on </label>
+                <input type="date" id="returnDate" name="returnDate" class = "ai-fill"><br><br>
+            </div><div class = "fill-the-blank">
+                <label for="noOfPassengers" class = "aiLabel"> I will have </label>
+                <input type="number" id="noOfPassengers" name="noOfPassengers" class = "ai-fill"><br><br>
+                <label for="noOfCheckedBags" class = "aiLabel"> passangers and the number of bags I will be checking is </label>
+                <input type="number" id="noOfCheckedBags" name="noOfCheckedBags" class = "ai-fill"><br><br>
+                <button onclick = "saveInfo()" class = "white-button">Send</button>
+            </div>
+        </div>
+    </div>
+    <!-- Back button exists in all pages throughout ticketing process -->
+    <div class = back-button>
+        <button onclick = "location.href='Home.html'">Back</button>
+    </div>
+</body>
+</html>

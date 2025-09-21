@@ -1,0 +1,2 @@
+# Flight Finder Site
+This was my final project in my HCI course I completed abroad in South Korea. This is a simulated UI design for a travel webist that would be used to find and book flights. I programmed the website using html, javascript, and css. We were also asked to write an evaluation of our site using HCI principals.

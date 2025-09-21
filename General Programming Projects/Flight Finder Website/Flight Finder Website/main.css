@@ -1,0 +1,446 @@
+/* General formating */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+input{
+    width: 250px;
+    background:#ffffff;
+    color:#000000;
+    border : 1% solid #000000;
+    height: 35px;
+}
+select{
+    width: 225px;
+    background:#ffffff;
+    color:#000000;
+    border : 2px solid #000000;
+    height: 35px;
+}
+button{
+    width:125px;
+    height: 50px;
+    margin: 1%;
+    background:#D9D9D9;
+    color:#000000;
+    border: 3% solid #000000;
+    border-radius: 10px;
+    cursor:pointer;
+    font-size: 140%;
+}
+.white-button{
+    background-color: #ffffff;
+    color: #598853;
+}
+.back-button{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+.page-title{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 2000;
+    margin: 0;
+}
+.page-title-progress{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 2000;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #D9D9D9;
+    margin-right: 30%;
+    margin-left: 30%;
+    height: 70px;
+    border: 3px solid black;
+}
+
+/* Flight Table formating */
+.flight-table{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    background-color: #D9D9D9;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+.show-button{
+    width: 100px;
+    height: 40px;
+    font-size: 70%;
+    background-color: #ffffff;
+    color: #598853;
+}
+.file-upload{
+    display: flex;
+    justify-content: center;
+    background-color: #D9D9D9;
+    margin-right: 30%;
+    margin-left: 30%;
+    border: 1px solid black;
+}
+.file{
+    margin-top: 15px;
+    margin-left: 10px;
+    background-color: #D9D9D9;
+}
+.file-input{
+    background-color: #D9D9D9;
+}
+
+/* Top bar formating */
+nav{
+    background-color: #5BD0CC;
+    padding: 10px;
+}
+.AirplaneLogo{
+    height: 60px;
+    width: 60px;
+}
+.logo{
+    
+    font-size: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.nav-logo{
+    display: flex;
+}
+
+/* Login page formating */
+.login{
+    padding: 20px;
+    text-align: center;
+    font-size: 40px;
+
+}
+.login-Username{
+    display:flex;
+    justify-content: center;  
+    font-size: 30px;  
+}
+.login-Password{
+    display:flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size:30px;
+    margin-left: 6px;
+}
+.login-Submit{
+    display:flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Home page formating */
+.options-button-container{
+    display: flex;
+    justify-content: right;
+    margin-right: 30%;
+    
+}
+.instructions{
+    font-size: 25px;
+    text-align: center;
+    font-weight: 2000;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.info-button-container{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.chatbot-button{
+    margin: 0;
+}
+
+/* Options page formating */
+.options-buttons{
+    font-size: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+
+/* Fill info page formating */
+.form{
+    background-color: #D9D9D9;
+    margin-right: 30%;
+    margin-left: 30%;
+    border: 3px solid black;
+}
+.form-info{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.upload{
+    display: flex;
+    justify-content: center;
+    background-color: #D9D9D9;
+    margin-right: 30%;
+    margin-left: 30%;
+    border: 3px solid black;
+}
+select{
+    background-color: white;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.drop-downs{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+/* Flight choose page */
+.title-instructions{
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #D9D9D9;
+    border: 3px solid black;
+    font-size: 20px
+}
+#previousFlights{
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+/* Flight Details page */
+
+.info-row{
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #D9D9D9;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+.data-point{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.seat-button-row{
+    display: flex;
+    justify-content: center;
+    background-color: #D9D9D9;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.seat-pick-ui{
+    border-top: 3px solid black;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.seat-pick-instructions{
+    text-align: center;
+    font-size: 20px;
+    height: 35px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #D9D9D9;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.seatButton{
+    width: 45px;
+    height: 30px;
+    font-size: 20px;
+    margin: 2px;
+    background-color: #ffffff;
+    color: #598853;
+}
+
+.input-row{
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #D9D9D9;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.input-label{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.input-box{
+    margin-top: 20px;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.submit-button-container{
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #D9D9D9;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+/* Confirmation page */
+.info-row-confirm{
+    margin-left: 30%;
+    margin-right: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.home-share-row{
+    display: flex;
+    justify-content: center;
+}
+
+/* AI page */
+.chat-window{
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #D9D9D9;
+    border: 3px solid black;
+    overflow-y: scroll;
+}
+
+.chat-input{
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: right;
+}
+
+.chat-input-box{
+    width: 250px;
+    height: 35px;
+    margin-top: 10px;
+    background:#ffffff;
+    color:#000000;
+    border : 1% solid #000000;
+}
+
+.send-message-space{
+    border-top: 2px solid black;
+}
+
+.fill-the-blank{
+    display: flex;
+}
+
+.aiLabel{
+    font-size: 14px;
+}
+
+.ai-fill{
+    width: 24px;
+    height: 15px;
+    background:#ffffff;
+    color:#000000;
+    border : 1% solid #000000;
+}
+
+
+/* Formating for mobile devices */
+@media (max-width: 500px){
+    .options-button-container{
+        margin-right: 0;
+    }
+    .options-button{
+        width: 100px;
+        height: 40px;
+        font-size: 100%;
+    }
+    .instructions{
+        font-size: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .flight-table{
+        margin-right: 0;
+        margin-left: 0;
+        font-size: 10px;
+    }
+    .file-upload{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .form{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .upload{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .form-info{
+        margin-left: 0;
+        margin-right:0;
+    }
+    .page-title-progress{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    input{
+        width: 150px;
+    }
+    select{
+        margin-left: 0;
+        margin-right: 2px;
+    }
+    .info-row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .seat-pick-ui{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .input-row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .submit-button-container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .input-box{
+        margin-right: 10px;
+        width: 75px;
+    }
+    .chat-window{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .chat-input{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    select{
+        width: 100px;
+    }
+    .title-instructions{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .flight-table{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    #selectButton{
+        width: 100px;
+        height: 40px;
+        font-size: 100%;
+    }
+    
+}

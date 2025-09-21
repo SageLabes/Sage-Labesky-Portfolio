@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src = "Functions.js"></script>
+</head>
+<body onload = "populateFlightDetails()">
+    <!-- Function to transfer flight information from previous page to this one on page load -->
+    <nav>
+        <div class = "nav-logo">
+            <img src="img/BetterAirplane.svg" alt="AirplaneLogo" class = "AirplaneLogo">
+            <p1 class="logo">FindFlights</p1>
+        </div>
+    </nav>
+
+    <h1 class = "page-title-progress">Review and Book</h1>
+    <!-- Location where that info is filled in -->
+    <div class = "info-row">
+        <p id = "departLoc" class = "data-point"></p>
+        <p id = "destLoc" class = "data-point"></p>
+    </div>
+    <div class = "info-row">
+        <p id = "departDate" class = "data-point"></p>
+        <p id = "returnDate" class = "data-point"></p>
+    </div>
+    <div class = "info-row">
+        <p id = "price" class = "data-point"></p>
+        <p id = "flightNumber" class = "data-point"></p>
+    </div>
+    <!-- Seat picking UI (surely there is a better way to do this? I am not sure) -->
+    <div class = "seat-pick-ui">
+        <p class = "seat-pick-instructions">Please click to choose a seat.</p>
+        <div class = "seat-button-row">
+            <button id = "1a" class = "seatButton">1a</button>
+            <button id = "1b" class = "seatButton">1b</button>
+            <button id = "1c" class = "seatButton">1c</button>
+            <button id = "1d" class = "seatButton">1d</button>
+            <button id = "1e" class = "seatButton">1e</button>
+            <button id = "1f" class = "seatButton">1f</button>
+        </div>
+        <div class = "seat-button-row">
+            <button id = "2a" class = "seatButton">2a</button>
+            <button id = "2b" class = "seatButton">2b</button>
+            <button id = "2c" class = "seatButton">2c</button>
+            <button id = "2d" class = "seatButton">2d</button>
+            <button id = "2e" class = "seatButton">2e</button>
+            <button id = "2f" class = "seatButton">2f</button>
+        </div>
+        <div class = "seat-button-row">
+            <button id = "3a" class = "seatButton">3a</button>
+            <button id = "3b" class = "seatButton">3b</button>
+            <button id = "3c" class = "seatButton">3c</button>
+            <button id = "3d" class = "seatButton">3d</button>
+            <button id = "3e" class = "seatButton">3e</button>
+            <button id = "3f" class = "seatButton">3f</button>
+        </div>
+        <div class = "seat-button-row">
+            <button id = "4a" class = "seatButton">4a</button>
+            <button id = "4b" class = "seatButton">4b</button>
+            <button id = "4c" class = "seatButton">4c</button>
+            <button id = "4d" class = "seatButton">4d</button>
+            <button id = "4e" class = "seatButton">4e</button>
+            <button id = "4f" class = "seatButton">4f</button>
+        </div>
+        <div class = "seat-button-row">
+            <button id = "5a" class = "seatButton">5a</button>
+            <button id = "5b" class = "seatButton">5b</button>
+            <button id = "5c" class = "seatButton">5c</button>
+            <button id = "5d" class = "seatButton">5d</button>
+            <button id = "5e" class = "seatButton">5e</button>
+            <button id = "5f" class = "seatButton">5f</button>
+        </div>
+        <div class = "seat-button-row">
+            <button id = "6a" class = "seatButton">6a</button>
+            <button id = "6b" class = "seatButton">6b</button>
+            <button id = "6c" class = "seatButton">6c</button>
+            <button id = "6d" class = "seatButton">6d</button>
+            <button id = "6e" class = "seatButton">6e</button>
+            <button id = "6f" class = "seatButton">6f</button>
+        </div>
+        <div class = "seat-button-row">
+            <button id = "7a" class = "seatButton">7a</button>
+            <button id = "7b" class = "seatButton">7b</button>
+            <button id = "7c" class = "seatButton">7c</button>
+            <button id = "7d" class = "seatButton">7d</button>
+            <button id = "7e" class = "seatButton">7e</button>
+            <button id = "7f" class = "seatButton">7f</button>
+        </div>
+        <div class = "seat-button-row">
+            <button id = "8a" class = "seatButton">8a</button>
+            <button id = "8b" class = "seatButton">8b</button>
+            <button id = "8c" class = "seatButton">8c</button>
+            <button id = "8d" class = "seatButton">8d</button>
+            <button id = "8e" class = "seatButton">8e</button>
+            <button id = "8f" class = "seatButton">8f</button>
+        </div>
+    </div>
+    <!-- Locations for the user to input information required to purchase tickets -->
+    <div class = "input-row">
+        <label for="noOfPassengers" class = "input-label">No. Of Passengers:</label>
+        <input type="number" id="noOfPassengers" name="noOfPassengers" class = "input-box">
+        <label for="noOfCheckedBags" class = "input-label">No. Of Checked Bags:</label>
+        <input type="number" id="noOfCheckedBags" name="noOfCheckedBags" class = "input-box">
+    </div>
+    <div class = "input-row">
+        <label for="cardNumber" class = "input-label">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" class = "input-box">
+        <label for="expirationDate" class = "input-label">Expiration Date:</label>
+        <input type="date" id="expirationDate" name="expirationDate" class = "input-box">
+    </div>
+    <div class = "input-row">
+        <label for="security-code" class = "input-label">Security Code:</label>
+        <input type="text" id="security-code" name="security-code" class = "input-box">
+        <label for="billingAddress" class = "input-label">Billing Address:</label>
+        <input type="text" id="billingAddress" name="billingAddress" class = "input-box">
+    </div>
+    <div class = "submit-button-container">
+        <p>Upload your trips file here:</p>
+        <input class = "file" type="file" id = "file">
+        <button onclick= "addToPrevFlights()" class = "white-button">Submit</button>
+    </div>
+    <!-- back button -->
+    <div class = back-button>
+        <button onclick = "location.href='FlightResults.html'">Back</button>
+    </div>
+</body>
+</html>

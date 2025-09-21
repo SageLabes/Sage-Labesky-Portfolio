@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src = "Functions.js"></script>
+    <script src = "FillLocations.js"></script>
+</head>
+<body onload = "fillLocationsDropDown()">
+    <!-- Same function as AI page to load locations from the javascript file -->
+    <nav>
+        <div class = "nav-logo">
+            <img src="img/BetterAirplane.svg" alt="AirplaneLogo" class = "AirplaneLogo">
+            <p1 class="logo">FindFlights</p1>
+        </div>
+    </nav>
+
+    <h1 class = "page-title-progress">Fill Information</h1>
+    <!-- form for the user to fill information in -->
+    <div class = "form">
+        <div class = "form-info">
+        <form>
+            <div class = "drop-downs">
+                <label for="startingLocation">Departure:</label>
+                <select name = "locations" id = "startingLocation">
+                </select><br><br>
+                <label for="destination">Destination:</label>
+                <select name = "locations" id = "destination">
+                </select><br><br>
+            </div>
+            <label for="departureDate">Departure Date:</label>
+            <input type="date" id="departureDate" name="departureDate"><br><br>
+            <label for="returnDate">Return Date:</label>
+            <input type="date" id="returnDate" name="returnDate"><br><br>
+            <label for="noOfPassengers">No. Of Passengers:</label>
+            <input type="number" id="noOfPassengers" name="noOfPassengers"><br><br>
+            <label for="noOfCheckedBags">No. Of Checked Bags:</label>
+            <input type="number" id="noOfCheckedBags" name="noOfCheckedBags"><br><br>
+        </form>
+        </div>
+        <div class = "info-button-container">
+        <button onclick= "saveInfo()" class = "white-button">Submit</button>
+        </div>
+    </div>
+    <!-- Back button -->
+    <div class = back-button>
+        <button onclick = "location.href='Home.html'">Back</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Animal Simulation
+# Author: Sage Labesky
+This project is probably my favorite program I have ever written. It is a simulation of a collection of animals given different behaviors on a grid world. It was written in Java and will run if the contents of this folder are placed into Eclipse IDE. It uses the University of Denvers DUdraw library for graphical generation. Each animal is represented by a class with different attributes and the end result is truly glorious.
+Once the program is running typing 'c' 's' 'a' 't' or 'h' will spawn in creatures. You can spawn in as many as you want before your computer crashed.

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src = "Functions.js"></script>
+</head>
+<body onload = "populateFlightDetails()">
+    <!-- Has an onload function to fill in the flight information from the previous page onto this page -->
+    <nav>
+        <div class = "nav-logo">
+            <img src="img/BetterAirplane.svg" alt="AirplaneLogo" class = "AirplaneLogo">
+            <p1 class="logo">FindFlights</p1>
+        </div>
+    </nav>
+
+    <h1 class = "page-title">Booking Complete</h1>
+
+    <div class = "instructions">
+        <p>Booking was successful! You can review and share your information below. Please click home to return to the home page when you are finished.</p>
+    </div>
+    <!-- Has <p> elements with no specified information so that they can be loaded with the onload function -->
+    <div class = "info-row-confirm">
+        <p id = "departLoc" class = "data-point"></p>
+        <p id = "destLoc" class = "data-point"></p>
+    </div>
+    <div class = "info-row-confirm">
+        <p id = "departDate" class = "data-point"></p>
+        <p id = "returnDate" class = "data-point"></p>
+    </div>
+    <div class = "info-row-confirm">
+        <p id = "price" class = "data-point"></p>
+    </div>
+    <!-- Page doesn't have back button, return to home and share are here instead -->
+    <div class = "home-share-row">
+        <button onclick = "location.href='Home.html'">Home</button>
+        <button onclick = "openEmail()">Share</button>
+    </div>
+</body>
+</html>

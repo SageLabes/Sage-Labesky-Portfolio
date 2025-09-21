@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src = "Functions.js"></script>
+</head>
+<body onload = "populateResultsTable()">
+    <!-- Function onload that populated the table of results of different flight options -->
+    <nav>
+        <div class = "nav-logo">
+            <img src="img/BetterAirplane.svg" alt="AirplaneLogo" class = "AirplaneLogo">
+            <p1 class="logo">FindFlights</p1>
+        </div>
+    </nav>
+
+    <h1 class = "page-title-progress">Choose a Flight</h1>
+
+    <div class = "title-instructions">
+        <b id = "flight-choose-instructions">Please choose the flight that best matches your needs. Click or tap the one you choose to view the checkout page.</b>
+    </div>
+    <div class = "flight-table">
+        <table id="previousFlights" border="1" >
+            <!-- Table that will be populated with flight options by onload function -->
+            <thead>
+                <tr>
+                    <th>Flight Number</th>
+                    <th>Starting Location</th>
+                    <th>Destination</th>
+                    <th>Departure Date</th>
+                    <th>Return Date</th>
+                    <th>Price</th>
+                    <th>Click to Choose</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <!-- Back button -->
+    <div class = back-button>
+        <button onclick = "location.href='FillInfo.html'">Back</button>
+    </div>
+</body>
+</html>
