@@ -1,0 +1,1 @@
+This folder must be in the same directory as GPTImageAnalyze.py and WebServer.py for the program to function
