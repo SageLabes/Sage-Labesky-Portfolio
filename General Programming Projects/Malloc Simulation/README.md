@@ -1,3 +1,3 @@
-# Malloc Simulation
+# Malloc Simulation 2024
 # Collaborators: Sage Labesky, Vivian Tran
 This project is a simulation of how memory allocation and trash collection works. It was written in c. The makefile for compilation is included. The program simulates memory being added and removed from the heap. The especially difficult parts of programming this project where getting the unused blocks that were recently made free to combine when they neighbored each other. 
