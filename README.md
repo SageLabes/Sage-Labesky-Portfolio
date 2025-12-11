@@ -4,6 +4,9 @@ This repository is a collection of notable projects revolving around computer sc
 Each folder represents a different category of project
 
 # Project Overviews:
+## Distinction Project
+- Large project undertaken to obtain Distinction in Computer Science at the University of Denver
+- Combines Artificial Intelligence and embedded systems to create a device that photographs the surrounding environment and outputs an audio description of the photograph to the user
 ## Organized/Official Projects
 - Global Game Jam 2025: Worked in a group to program a game in Unity for a 72 hour game jam
 ## Embeded/Arduino projects
