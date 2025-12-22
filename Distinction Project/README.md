@@ -1,6 +1,6 @@
 # Distinction_Project_Labesky
 This project will produce an embedded device with the capability of serving as a way to recieve immediate, on the fly audio descriptions of the visual environment around the user. It will be able to take photographs on random intervals or when specified by the user. The images and text descriptions will be stored in a database on another device and can be viewed by the user. This is intended to serve the purpose of both helping a user understand the environment around them and creating an interesting visual journal that takes minimal effort but can provide interesting points of reflection.
-
+A video demo of the project can be viewed here: https://www.youtube.com/watch?v=hTL25EAKz5Q
 
 ## Project overall 
 - Small device with a camera 
